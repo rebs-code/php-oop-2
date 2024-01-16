@@ -1,15 +1,16 @@
 <?php
+
 // import the Product class
 require_once 'Product.php';
 
 /**
- * ToyProduct
+ * KennelProduct
  */
-class ToyProduct extends Product
+class KennelProduct extends Product
 {
 
     // add expiration_date property as propery only of Foodproduct
-    public $material;
+    public $pet_size;
 
     /**
      * __construct
@@ -18,14 +19,14 @@ class ToyProduct extends Product
      * @param  mixed $price
      * @param  mixed $description
      * @param  mixed $category
-     * @param  mixed $material
+     * @param  mixed $pet_size
      * @return void
      */
     // add material as parameter of the constructor
-    public function __construct($name, $price, $description, Category $category, $material)
+    public function __construct($name, $price, $description, Category $category, $pet_size)
     {
         // call the parent constructor before anything else, then we can add the expiration_date property
         parent::__construct($name, $price, $description, $category);
-        $this->material = $material;
+        $this->pet_size = $pet_size;
     }
 }
