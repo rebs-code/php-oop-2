@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "name": "Dog Food",
+      "description": "Healthy dog food",
+      "price": 20.99,
+      "category": "Dogs",
+      "type": "Food"
+    },
+    {
+      "name": "Cat Toy",
+      "description": "Interactive cat toy",
+      "price": 9.99,
+      "category": "Cats",
+      "type": "Toy"
+    },
+    {
+      "name": "Dog Kennel",
+      "description": "Cozy dog kennel",
+      "price": 99.99,
+      "category": "Dogs",
+      "type": "Kennel"
+    }
+  ]
+}
