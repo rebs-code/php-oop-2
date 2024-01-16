@@ -7,16 +7,7 @@ require_once __DIR__ . '/models/FoodProduct.php';
 require_once __DIR__ . '/models/ToyProduct.php';
 require_once __DIR__ . '/models/KennelProduct.php';
 require_once __DIR__ . '/models/Category.php';
-
-$dogCategory = new Category('Dogs');
-$catCategory = new Category('Cats');
-
-$products = [
-    new FoodProduct('Dog Food', 'Healthy dog food', 20.99, $dogCategory, '2024-12-31'),
-    new ToyProduct('Cat Toy', 'Interactive cat toy', 9.99, $catCategory, 'Plastic'),
-    new KennelProduct('Dog Kennel', 'Cozy dog kennel', 99.99, $dogCategory, 'Large')
-];
-
+require_once __DIR__ . '/database/db.php';
 
 ?>
 

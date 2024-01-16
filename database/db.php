@@ -1,19 +1,10 @@
 <?php
 
-// import the Product class
-require_once '../models/Product.php';
-require_once '../models/FoodProduct.php';
-require_once '../models/ToyProduct.php';
-require_once '../models/KennelProduct.php';
-require_once '../models/Category.php';
-
-
-// Define categories
 $dogCategory = new Category('Dogs');
 $catCategory = new Category('Cats');
 
 $products = [
-    new FoodProduct('Dog Food', 'Healthy dog food', 20.99, $dogCategory, '2024-12-31'),
-    new ToyProduct('Cat Toy', 'Interactive cat toy', 9.99, $catCategory, 'Plastic'),
-    new KennelProduct('Dog Kennel', 'Cozy dog kennel', 99.99, $dogCategory, 'Large')
+    new FoodProduct('Dog food', 20.99, 'Healthy dog food', $dogCategory, '2024-12-31'),
+    new ToyProduct('Cat Toy', 9.99, 'Interactive cat toy', $catCategory, 'Plastic'),
+    new KennelProduct('Dog Kennel', 99.99, 'Cozy dog kennel', $dogCategory, 'Large')
 ];
