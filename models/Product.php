@@ -16,4 +16,29 @@ class Product
         $this->category = $category;
         $this->type = $type;
     }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getPrice()
+    {
+        return '€ ' . $this->price;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function getCategory()
+    {
+        return $this->category->name;
+    }
+
+    public function getType()
+    {
+        return $this->type;
+    }
 }
