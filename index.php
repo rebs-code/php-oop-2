@@ -1,5 +1,10 @@
 <?php
-require_once __DIR__ . '/Controllers/ControllerProduct.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once __DIR__ . '../../database/db.php';
+require_once __DIR__ . '../../models/Product.php';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,16 +22,15 @@ require_once __DIR__ . '/Controllers/ControllerProduct.php';
     </header>
     <?php foreach ($products as $product) : ?>
         <hr>
-        <h2><?= $product->get_name(); ?></h2>
+        <h2><?= $product->getName(); ?></h2>
         <div>
             <ul>
-                <li>Durata: <?php echo $movie->get_duration(); ?></li>
-                <li>Anno: <?php echo $movie->get_year(); ?></li>
-                <li>Generi: <?php echo $movie->get_all_genres(); ?> </li>
+                <li>Price: <?= $product->getPrice(); ?></li>
+                <li>Description: <?= $product->getDescription(); ?></li>
+                <li>Category: <?= $product->getCategory(); ?> </li>
+                <li>Type: <?= $product->getType(); ?> </li>
             </ul>
         </div>
-
-
 
     <?php endforeach; ?>
 
