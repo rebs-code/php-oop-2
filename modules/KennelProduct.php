@@ -26,7 +26,7 @@ class KennelProduct extends Product
     public function __construct($name, $price, $description, Category $category, $pet_size)
     {
         // call the parent constructor before anything else, then we can add the expiration_date property
-        parent::__construct($name, $price, $description, $category);
+        parent::__construct($name, $price, $description, $category, 'kennel');
         $this->pet_size = $pet_size;
     }
 }

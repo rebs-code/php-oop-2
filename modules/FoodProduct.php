@@ -25,7 +25,7 @@ class FoodProduct extends Product
     public function __construct($name, $price, $description, Category $category, $expiration_date)
     {
         // call the parent constructor before anything else, then we can add the expiration_date property
-        parent::__construct($name, $price, $description, $category);
+        parent::__construct($name, $price, $description, $category, 'food');
         $this->expiration_date = $expiration_date;
     }
 }
