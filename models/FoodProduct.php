@@ -28,4 +28,28 @@ class FoodProduct extends Product
         parent::__construct($name, $price, $description, $category, 'food');
         $this->expiration_date = $expiration_date;
     }
+
+    /**
+     * getExpirationDate
+     *
+     * @return void
+     */
+    public function getExpirationDate()
+    {
+        return $this->expiration_date;
+    }
+
+    /**
+     * setExpirationDate
+     *
+     * @param  mixed $expiration_date
+     * @return void
+     */
+    public function setExpirationDate($expiration_date)
+    {
+        if (empty($expiration_date)) {
+            throw new Exception('Expiration date is empty');
+        }
+        $this->expiration_date = $expiration_date;
+    }
 }

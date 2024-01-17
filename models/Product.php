@@ -7,7 +7,10 @@ require_once __DIR__ . '/../traits/Name.php';
  */
 class Product
 {
-    use Name;
+    use Name {
+        set_name as set_name_trait;
+        get_name as get_name_trait;
+    }
 
     public $price;
     public $description;
@@ -31,11 +34,6 @@ class Product
     public function getDescription()
     {
         return $this->description;
-    }
-
-    public function getCategory()
-    {
-        return $this->category->name;
     }
 
     public function getType()
