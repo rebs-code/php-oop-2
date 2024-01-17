@@ -1,8 +1,10 @@
 <?php
 
+require_once __DIR__ . '/../traits/Name.php';
+
 class Category
 {
-    public $name;
+    use Name;
 
     public function __construct($name)
     {
